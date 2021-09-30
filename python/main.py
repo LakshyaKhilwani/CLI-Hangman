@@ -1,19 +1,20 @@
 import random
-from os import system,name 
+from time import sleep
+from os import system,name
 with open("words.txt") as f:
     words_list=f.read().split(" ")
 
 word=random.choice(words_list)
-
+print(word)
 def clear(): 
   
     # for windows 
     if name == 'nt': 
-        _ = system('cls') 
+        system('cls') 
   
     # for mac and linux(here, os.name is 'posix') 
     else: 
-        _ = system('clear') 
+        system('clear') 
 HANGMAN = (
     """
  ------
@@ -181,8 +182,9 @@ while "_ " in get_word_state() and attemptLeft:
     print(get_hangman())
     print("Word:",get_word_state())
     correctGuess=get_input()
+    sleep(1)
 
-clear()
+# clear()
 print(get_hangman())
 print("Word:",get_word_state())
 
