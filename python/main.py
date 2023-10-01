@@ -8,7 +8,8 @@ word=random.choice(words_list)
 print(word)
 def clear(): 
   
-    # for windows 
+    # for windows
+    # clearscreen 
     if name == 'nt': 
         system('cls') 
   
